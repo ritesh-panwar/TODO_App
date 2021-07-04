@@ -7,11 +7,13 @@ body{
     justify-content: center;
 }
 
+/* Outer Div containing whole application  */
 #outer-container{
     width: 60%;
     height: auto;
 }
 
+/* Header image */
 header{
     box-shadow: 2px 30px 20px 1px black;
     height: 45px;
@@ -20,6 +22,7 @@ header{
     background-size: cover;
 }
 
+/* Application Container */
 #container{
     background-color: white;
     width: 100%;
@@ -31,10 +34,12 @@ header{
 
 }
 
+/* Sketch tool for construction */
 .sketch{
     border: 1px solid black;
 }
 
+/* Horizontal Line */
 hr{
     width: 95%;
 }
@@ -95,6 +100,7 @@ button{
     display: inline-block;
 }
 
+/* Color Classes */
 .blue-bg{
     background-color: rgb(55, 124, 202);
 }
@@ -118,7 +124,7 @@ button{
     border-radius: 5px;
     position: relative;
     bottom: 1.7rem;
-    left: 54%;
+    left: 55%;
 }
 
 #addButton:hover{
@@ -141,8 +147,6 @@ button{
 
 
 /* Task Card Styling */
-
-
 #task-list{
     list-style: none;
     margin-top: -13px;
@@ -220,6 +224,40 @@ input[type=checkbox]{
 
 input[type=checkbox]:checked ~ div label{
     text-decoration: line-through;
-    color: rgb(166, 189, 166);
+    color: rgb(162, 202, 162);
 }
 
+
+/* Media Queries for Responsive design */
+
+@media screen and (max-width: 965px){
+    #outer-container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 720px){
+    #outer-container{
+        width: 100%;
+    }
+}
+
+/* Mobile View Optimization */
+@media screen and (max-width: 575px){
+    html{
+        font-size: 13px;
+    }
+    table label, input, select{
+        margin: 0;
+        
+    }
+    #container{
+        top: -2px;
+    }
+    #addButton{
+       left: 7%;
+    }
+    #deleteButton{
+        left: 52%;
+    }
+}

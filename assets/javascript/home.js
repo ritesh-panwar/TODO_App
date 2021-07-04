@@ -35,7 +35,7 @@ for(let i=0; i<categories.length; i++){
 let priorities = document.getElementsByClassName("priorityLabel");
 for(let i=0; i<priorities.length; i++){
     let p = priorities[i];
-    let ctr = 0;
+    let ctr = 0;   //counter for stars to be added according to priority
     if(p.innerText == "Low"){
         ctr = 1;
     }
@@ -46,6 +46,7 @@ for(let i=0; i<priorities.length; i++){
         ctr = 3;
     }
     p.innerText = "Priority: ";
+    //Adding required stars in the tasks card as per the priority level
     while(ctr-- > 0){
         let node = document.createElement("I");
         node.classList.add("fas");

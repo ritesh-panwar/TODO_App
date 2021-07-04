@@ -33,6 +33,7 @@ module.exports.addtask = function(req, res){
     });
 }
 
+//Exporting delete-tasks Function
 module.exports.deletetasks = function(req, res){
 
     Object.keys(req.body).forEach(function(key) {
@@ -43,6 +44,5 @@ module.exports.deletetasks = function(req, res){
             }
         });
     });
-    return res.redirect('back');
-   
+    return res.redirect('back');  
 }
