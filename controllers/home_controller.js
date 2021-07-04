@@ -31,3 +31,17 @@ module.exports.addtask = function(req, res){
         return res.redirect('back');
     });
 }
+
+module.exports.deletetasks = function(req, res){
+
+    Object.keys(req.body).forEach(function(key) {
+        Task.findByIdAndDelete(key, function(err){
+            if(err){
+                console.log('Error in deleting an object from datbase');
+                return;
+            }
+        });
+    });
+    return res.redirect('back');
+    
+}
