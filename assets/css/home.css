@@ -2,6 +2,8 @@ body{
     margin: 0;
     display: flex;
     background-color:rgb(90, 90, 90);
+    font-family: sans-serif;
+    color: rgb(68, 68, 68);
     justify-content: center;
 }
 
@@ -12,7 +14,7 @@ body{
 }
 
 .sketch{
-    border: 1px solid white
+    border: 1px solid black;
 }
 
 hr{
@@ -60,8 +62,107 @@ button{
 }
 
 
+/* Styling Buttons */
+#addButton{
+    border-radius: 5px;
+    position: relative;
+    top: 2.15rem;
+    left: 13%;
+    width: 12rem;
+}
+
+#deleteButton{
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    bottom: 1.7rem;
+    left: 54%;
+}
+
+#addButton:hover{
+    box-shadow: 0px 0px 4px 2px grey;
+}
+
+#deleteButton:hover{
+    box-shadow: 0px 0px 4px 2px grey;
+}
+
+#addButton:active {
+    animation: shakeY;
+    animation-duration: 2s;
+}
+
+#deleteButton:active {
+    animation: shakeY;
+    animation-duration: 2s;
+}
+
+
 /* Task Card Styling */
-input[type=checkbox]:checked + label{
+
+
+#task-list{
+    list-style: none;
+    margin-top: -13px;
+}
+
+.task-card{
+    margin-left: -2.6rem;
+    padding: 0.5rem 0 0.5rem 0;
+    height: 3.7rem;
+}
+
+input[type=checkbox]{
+    position: relative;
+    left: -0.8rem;
+    top: 0.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.info-div{
+    position: relative;
+    left: 3rem;
+    top: -1rem;
+    width: 60%;
+}
+
+.descriptionLabel{
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+.dateLabelC{
+    font-size: 0.9rem;
+    color: grey;
+    position: relative;
+    left: -8rem;
+    top: 1.5rem;
+}
+
+.task-card hr{
+    /* position: relative; */
+    /* top: 2rem; */
+}
+
+.categoryLabel{
+    position: relative;
+    top: 0rem;
+    text-transform: uppercase;
+    border: 1px solid black;
+    padding: 9px;
+    color: white;
+    background-color: black;
+}
+
+.priorityLabel{
+    position: relative;
+    top: 2rem;
+}
+
+input[type=checkbox]:checked ~ div label{
     text-decoration: line-through;
     color: rgb(166, 189, 166);
 }
+

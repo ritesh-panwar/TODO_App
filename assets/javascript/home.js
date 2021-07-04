@@ -1,3 +1,4 @@
+//Correcting the date format for task card
 let date = document.getElementsByClassName("dateLabel");
 for(let i=0; i<date.length; i++){
     let str = date[i];
@@ -10,3 +11,4 @@ for(let i=0; i<date.length; i++){
         str.innerText = (day+", "+dateF);
     }
 }
+

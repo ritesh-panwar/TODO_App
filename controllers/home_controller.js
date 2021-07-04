@@ -21,11 +21,12 @@ module.exports.addtask = function(req, res){
     Task.create({
         description: req.body.description,
         category: req.body.category,
-        duedate: req.body.duedate
+        duedate: req.body.duedate,
+        priority: req.body.priority
     }, function(err, newTask){
         if(err){
             console.log('error in creating the Task!');
-            return;
+            return res.redirect('back');;
         }
         console.log('***********', newTask);
         return res.redirect('back');
@@ -38,7 +39,7 @@ module.exports.deletetasks = function(req, res){
         Task.findByIdAndDelete(key, function(err){
             if(err){
                 console.log('Error in deleting an object from datbase');
-                return;
+                return res.redirect('back');;
             }
         });
     });
