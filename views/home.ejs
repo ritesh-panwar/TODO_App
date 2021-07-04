@@ -58,15 +58,23 @@
                 DELETE TASKS
             </button>
             <hr>
-            <input type="checkbox" id="vehicle1" name="bike">
-            <label for="vehicle1"> I have a bike</label><br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-            <label for="vehicle2"> I have a car</label><br>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-            <label for="vehicle3"> I have a boat</label><br><br>
-
+            <ul>
+                <% for(let i of task_list) { %>
+                    <li>
+                        <input type="checkbox" id="<%= i._id %>" name="<%= i._id %>">
+                        <label for="<%= i._id %>"><%= i.description %></label>
+                        <label for="<%= i._id %>"><%= i.category %></label>
+                        <% let date  = JSON.stringify(i.duedate); %>
+                        <label class="dateLabel" for="<%= i._id %>">
+                            <%= i.duedate %>
+                        </label>
+                    </li>
+                <% } %>    
+            </ul>
         </form>
 
         </div>
+
+        <script type="text/javascript" src="/javascript/home.js"></script>
     </body>
 </html>
