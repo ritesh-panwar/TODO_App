@@ -32,4 +32,26 @@ for(let i=0; i<categories.length; i++){
 }
 
 //Setting up priority in task-cards
-let pLevel = document.getElementsByClassName("categoryLabel");
+let priorities = document.getElementsByClassName("priorityLabel");
+for(let i=0; i<priorities.length; i++){
+    let p = priorities[i];
+    let ctr = 0;
+    if(p.innerText == "Low"){
+        ctr = 1;
+    }
+    else if(p.innerText == "Medium"){
+        ctr = 2;
+    }
+    else if(p.innerText == "High"){
+        ctr = 3;
+    }
+    p.innerText = "Priority: ";
+    while(ctr-- > 0){
+        let node = document.createElement("I");
+        node.classList.add("fas");
+        node.classList.add("fa-star");
+        node.classList.add("star");
+        p.appendChild(node);
+    }
+}
+
