@@ -6,6 +6,8 @@ const port = 8000;
 
 //using express router
 app.use('/', require('./routes'));
+//accessing static files
+app.use(express.static('assets'));
 
 //Setting-up view engine
 app.set('view engine', 'ejs');

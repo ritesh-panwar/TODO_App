@@ -3,9 +3,70 @@
         <title>
             <%= title %>
         </title>
-        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
-        <h1><%= title %></h1>
+
+        <div id="container">
+        <!-- Heading -->
+        <h1 id="heading">
+            <i class="fas fa-calendar-check"></i>
+            <%= title %>
+        </h1>
+        <hr>
+
+        <!-- Form for task details -->
+        <form>
+            <table>
+                <tr>
+                    <td colspan="2">
+                    <label for="description">DESCRIPTION</label><br>
+                    <input type="text" id="description" name="description" placeholder="What do you need to do?">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="category">CATEGORY</label><br>
+                        <select id="category" name="category">
+                            <option value="Personal">Personal</option>
+                            <option value="School">School</option>
+                            <option value="Work">Work</option>
+                            <option value="Cleaning">Cleaning</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="duedate">DUE DATE</label><br>
+                        <input type="date" id="duedate" name="duedate">
+                    </td>
+                </tr>
+            </table>
+            
+            <!-- Add Task Button -->
+            <button type="submit" class="blue-bg">
+                <i class="fas fa-plus"></i>
+                ADD TASK
+            </button>
+        </form>
+
+        <!-- Form for selecting task to be delete -->
+        <form action="">
+            <!-- Delete Task Button -->
+            <button type="submit" class="red-bg">
+                <i class="fas fa-plus"></i>
+                DELETE TASKS
+            </button>
+            <hr>
+            <input type="checkbox" id="vehicle1" name="bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br><br>
+
+        </form>
+
+        </div>
     </body>
 </html>
