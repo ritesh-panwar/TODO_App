@@ -12,3 +12,24 @@ for(let i=0; i<date.length; i++){
     }
 }
 
+//Setting up different colors for categories
+let categories = document.getElementsByClassName("categoryLabelC");
+for(let i=0; i<categories.length; i++){
+    let ctg = categories[i];
+    if(ctg.innerText == "PERSONAL"){
+        ctg.style.backgroundColor = "darkgreen";
+
+    }else if(ctg.innerText == "SCHOOL"){
+        ctg.style.backgroundColor = "#F2A701";
+
+    }else if(ctg.innerText == "WORK"){
+        ctg.style.backgroundColor = "purple";
+
+    }else if(ctg.innerText == "CLEANING"){
+        ctg.style.backgroundColor = "darkblue";
+
+    }
+}
+
+//Setting up priority in task-cards
+let pLevel = document.getElementsByClassName("categoryLabel");

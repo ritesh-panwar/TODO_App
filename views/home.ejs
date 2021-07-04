@@ -18,7 +18,6 @@
             <i class="fas fa-calendar-check" style="color: rgb(97, 187, 97);"></i>
             <%= title %>
         </h1>
-        <hr>
 
         <!-- Form for task details -->
         <form action="/add-task" method="POST">
@@ -75,18 +74,25 @@
                     <li class="task-card">
                         <input type="checkbox" id="<%= i._id %>" name="<%= i._id %>">
                         <div class="info-div">
-                        <label class="descriptionLabel" for="<%= i._id %>"><%= i.description %></label>
-                        <span class="dateLabelC">
+                            <label class="descriptionLabel" for="<%= i._id %>"><%= i.description %></label>
+                        </div>
+                        <div class="categoryLabelC">
+                            <label class="categoryLabel" for="<%= i._id %>"><%= i.category %></label>
+                        </div>
+                        <div class="dateLabelC">
                             <i class="fas fa-calendar-alt"></i>
                             <label class="dateLabel" for="<%= i._id %>">
                                 <%= i.duedate %>
                             </label>
-                        </span>
-                        <label class="priorityLabel" for="<%= i._id %>">
-                            <%= i.priority %>
-                        </label>
                         </div>
-                        <label class="categoryLabel" for="<%= i._id %>"><%= i.category %></label>
+                        
+                        <div class="priorityLabelC">
+                            <label class="priorityLabel" for="<%= i._id %>">
+                                Priority:
+                            </label>
+                        </div>
+
+                        
                         <hr>
                     </li>
                 

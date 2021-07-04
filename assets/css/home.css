@@ -103,42 +103,45 @@ button{
 
 #task-list{
     list-style: none;
-    margin-top: -13px;
+    margin-top: -16px;
 }
 
 .task-card{
     margin-left: -2.6rem;
     padding: 0.5rem 0 0.5rem 0;
-    height: 3.7rem;
+    height: 3.5rem;
 }
 
 input[type=checkbox]{
     position: relative;
-    left: -0.8rem;
+    left: 0rem;
     top: 0.5rem;
     height: 1.2rem;
     width: 1.2rem;
 }
 
 .info-div{
+    display: inline-block;
     position: relative;
-    left: 3rem;
-    top: -1rem;
-    width: 60%;
+    left: 0.5rem;
+    top: 0rem;
+    width: 70%;
 }
 
 .descriptionLabel{
     position: relative;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 550;
 }
 
 .dateLabelC{
+    display: inline-block;
     font-size: 0.9rem;
     color: grey;
     position: relative;
-    left: -8rem;
-    top: 1.5rem;
+    left: 7.5%;
+    top: -5%;
+    width: 10rem;
 }
 
 .task-card hr{
@@ -146,20 +149,42 @@ input[type=checkbox]{
     /* top: 2rem; */
 }
 
-.categoryLabel{
+/* .categoryLabel{
+    display: inline-block;
     position: relative;
-    top: 0rem;
+    top: -1.5rem;
+    left: 75%;
     text-transform: uppercase;
     border: 1px solid black;
     padding: 9px;
     color: white;
     background-color: black;
+}  */
+
+.categoryLabelC{
+    display: inline-block;
+    width: auto;
+    position: relative;
+    top: 0.8rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 14px;
+    color: white;
+    background-color: black;
+    width: 5rem;
+    text-align: center;
+
 }
 
-.priorityLabel{
+.priorityLabelC{
+    display: inline-block;
     position: relative;
-    top: 2rem;
+    left: 10%;
+    top: -5%;
 }
+
 
 input[type=checkbox]:checked ~ div label{
     text-decoration: line-through;
