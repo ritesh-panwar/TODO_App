@@ -1,9 +1,15 @@
 //importing express module
 const express = require('express');
-const app = express();
 //port number
 const port = 8000;
 
+//Database dired
+const db = require('./config/mongoose');
+const Task = require('./models/task');
+
+//express fired up
+const app = express();
+app.use(express.urlencoded());
 //using express router
 app.use('/', require('./routes'));
 //accessing static files
